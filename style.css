@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+:is(h1, h2) {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.recipe__content {
+  padding: 2.5rem 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.recipe__heading {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.recipe__sub-heading {
+  color: var(--Nutmeg);
+}
+
+.recipe__sub-title {
+  color: var(--Dark-Raspberry);
+}
+
+.recipe__text {
+  color: var(--Dark-Charcoal);
+}
+
+.recipe__section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+:is(.recipe__section--instructions, .recipe__section--ingredients) {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+.recipe__section--preparation {
+  gap: 1rem;
+  background: var(--Rose-White);
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+}
+.recipe__list {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.recipe__list-item {
+  font-size: 1rem;
+}
+
+.recipe__list-item p {
+  padding-left: 1.5rem;
+  line-height: 1.5;
+}
+
+::marker {
+  color: var(--Nutmeg);
+  font-weight: 600;
+}
+
+strong {
+  color: var(--Wenge-Brown);
+}
+
+.recipe__table {
+  margin-top: -1rem;
+}
+
+.recipe__table-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid var(--Light-Grey);
+  padding: 0.5rem;
+}
+
+th {
+  color: var(--Wenge-Brown);
+  font-weight: 400;
+}
+
+td {
+  color: var(--Nutmeg);
+  font-weight: 700;
+}
+
+@media (min-width: 64rem) {
+  body {
+    padding-block: 7.5rem;
+    padding-inline: 21.5rem;
+    background: var(--Rose-White);
+  }
+  main {
+    background: var(--White);
+    border-radius: 0.8rem;
+    padding: 2.25rem;
+    width: 100%;
+  }
+
+  img {
+    border-radius: inherit;
+  }
+
+  .recipe__content {
+    padding: 2.5rem 0 0;
+  }
+
+  :is(th, td) {
+    text-align: start;
+  }
+}
